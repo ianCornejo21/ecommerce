@@ -1,0 +1,380 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto',sans-serif;
+}
+h1 {font-size: 3.5em;}
+h2 {font-size: 2.7em;}
+h3 {font-size: 2em;}
+p {font-size: 1.25em;}
+
+button {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: blueviolet;
+}
+
+button:hover{
+    background-color: rgb(98, 30, 161);
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+    height: 3.5em;
+}
+
+.color-acento {color: blueviolet;}
+header {
+    background-color: rgb(240, 240, 240);
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+}
+
+header img{
+    width: 85%;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: blueviolet;
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(media/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1 {
+    color: white;
+
+}
+
+#hero button{
+    font-size: 1.75em ;
+}
+
+#somos-develop .container {
+    text-align: center;
+    padding: 10em 12px;
+    padding-bottom: 40em;
+}
+
+#nuestros-programas {
+    background-color: rgb(30, 30, 30);
+    color: white;
+    text-align: center;
+}
+
+#nuestros-programas .container {
+    padding: 100px 0px;
+    padding-bottom: 40em;
+}
+
+#nuestros-programas h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#nuestros-programas p{
+    display: none;
+}
+
+#nuestros-programas .card{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.card:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(media/front-end.jpg);
+}
+.card:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(media/full-stack.jpg);
+}
+.card:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(media/python.jpg);
+}
+
+#final{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    height: 80vh;
+}
+
+#final h2{
+    font-size: 9vw;
+}
+
+#final button{
+    font-size: 5vw;
+}
+footer{
+    background-color: rgb(230, 230, 230);
+}
+
+footer p{
+    margin: 0;
+    color: rgb(100, 100, 100);
+    padding: 12px;
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+#contacto{
+    font-family: 'montserrat', sans-serif;
+    transition: 0.5s;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white
+    ;
+}
+
+.contacto-img {
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+}
+.contacto-img-2{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.contacto_rigth-side{
+    display: flex;
+    justify-self: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 7.3% 0 4.7%;
+    width: 50%;
+}
+
+.contacto-titulo{
+    font-size: 2em;
+    font-family: 'bellefair', serif;
+    font-weight: 400;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+}
+
+.contacto-input-line, .contacto-form{
+    display: flex;
+    justify-self: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contacto-input-line{
+    margin-bottom: 45px;
+}
+
+.contacto-label{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.contacto-input{
+    height: 30px;
+    outline: none;
+    padding: 5px 0;
+    border-bottom: 2px solid #121212;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    color: #121212;
+    background-color: transparent;
+}
+
+.contacto-input--textarea{
+    height: 100px;
+    outline: none;
+    padding: 5px 0;
+    border-bottom: 2px solid #121212;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    color: #121212;
+    background-color: transparent;
+    resize: none;
+}
+
+.contacto-submit{
+    padding: 18px 55px;
+    background-color: #121212;
+    border-radius: 50px;
+    color: #f2f2f2;
+    font-weight: 600;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.contacto-submit:hover{
+    background-color: blueviolet;
+}
+
+
+@media(min-width: 720px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav {
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #hero h1 {
+        font-size: 5em;
+    }
+
+    #somos-develop .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #somos-develop .texto{
+        width: 50%;
+        text-align: initial;
+        max-width: 600px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-self: center;
+    }
+
+    #somos-develop h2{
+        margin-top: 0;
+    }
+
+    #somos-develop .img-container{
+        background-image: url(media/somos-proya.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+    }
+
+    #nuestros-programas .programas{
+        display: flex;
+        justify-content: center;
+    }
+
+    #nuestros-programas p {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #nuestros-programas h3 {
+        margin-top: 0;
+    }
+
+    #nuestros-programas .card {
+        padding: 50px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    #final h2{
+        font-size: 5em;
+    }
+
+    #final button {
+        font-size: 2em;
+    }
+
+    footer .container {
+        justify-content: flex-end;
+    }
+}
