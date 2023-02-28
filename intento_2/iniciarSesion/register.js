@@ -1,7 +1,7 @@
-const form = document.getElementById(`form`)
-const nameInput = document.getElementById(`username`)
-const emailInput = document.getElementById(`email`)
-const passwordInput = document.getElementById(`password`)
+const form = document.getElementById("form")
+const nameInput = document.getElementById("username")
+const emailInput = document.getElementById("email")
+const passwordInput = document.getElementById("password")
 
 const checkUsername = () => {
     let valid = false;
@@ -11,7 +11,7 @@ const checkUsername = () => {
 
     const username = nameInput.value.trim()
     if (isEmpty(username)) {
-        showError(nameInput, `El username es obligatorio`)
+        showError(nameInput, "El username es obligatorio")
     } else if(!isBetween(username.length,min,max)) {
         showError(nameInput, `El usuario debe tener entre ${min} y ${max} caracteres`)
     } else {
@@ -38,7 +38,6 @@ const checkEmail = () => {
 
 const checkPassword = () => {
     let valid = false 
-
     const password = passwordInput.value.trim()
     if(isEmpty(password)){
         showError(passwordInput, `La contraseña es obligatoria`)
@@ -53,7 +52,7 @@ const checkPassword = () => {
 
 
 const isEmpty = (value) => value === ""
-const isBetween = (length, min, max) => length < min && length > max ? false : true
+const isBetween = (length, min, max) => length < min || length > max ? false : true
 const isEmailValid = (email) => {
     const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
     return re.test(email)
@@ -67,7 +66,7 @@ const showError = (input, message) => {
     formField.classList.remove("success")
     formField.classList.add("error")
     const error= formField.querySelector("small")
-    error.textContext = message
+    error.innerText = message
 }
 const showSuccess = (input) => {
     const formField = input.parentElement
@@ -83,12 +82,11 @@ form.addEventListener("submit", (e) => {
     let isUsernameValid = checkUsername();
     let isEmailValid = checkEmail();
     let isPasswordValid = checkPassword();
-    let isPhoneValid = checkPhone();
 
-    console.log(isUsernameValid, isEmailValid, isPasswordValid, isPhoneValid);
+    console.log(isUsernameValid, isEmailValid, isPasswordValid);
 
     let isFormValid =
-      isUsernameValid && isEmailValid && isPasswordValid && isPhoneValid;
+      isUsernameValid && isEmailValid && isPasswordValid;
 
     if (isFormValid) {
         form.submit();
@@ -97,7 +95,6 @@ form.addEventListener("submit", (e) => {
             isUsernameValid,
             isEmailValid,
             isPasswordValid,
-            isPhoneValid
       );
     }
   });

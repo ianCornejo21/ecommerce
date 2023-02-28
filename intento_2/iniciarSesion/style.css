@@ -23,7 +23,8 @@ h1{
     font-size: 2rem;
 }
 input[type="text"],
-input[type="password"]{
+input[type="password"],
+input[type="email"]{
     font-size: 20px;
     width: 82%;
     padding: 10px;
@@ -35,9 +36,10 @@ input[type="password"]{
 }
 .form__field small {
     color: #dc3545;
-    max-width: 350px;
+    max-width: 100%;
     text-align: center;
-    padding: 7px 0;
+    display: flex;
+    justify-content: center;
   }
 .icon{
     min-width: 50px;
